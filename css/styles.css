@@ -1,97 +1,56 @@
-body, html {
+/* Base resets and body/html rules */
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    background-color: white; /* Set background to white */
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: Arial, sans-serif;
 }
 
-.container {
-    text-align: center;
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
 }
 
-.error-code {
-    font-size: 10vw; /* Responsive font size */
-    color: #3b026a; /* Blue color for the text */
-    text-shadow: 3px 3px 0 #555; /* Shadow effect */
-}
 
-.avatar img {
-    width: 20%; /* Set width to 100% to fill the container */
-    height: auto; /* Maintain aspect ratio */
-    border: none;
-    position: absolute; /* Position the image absolutely */
-    bottom: 0; /* Align the bottom of the image with the bottom of the container */
-    left: 50%; /* Center the image horizontally */
-    transform: translateX(-50%); /* Adjust for the width of the image */
-}
 
-@media (max-width: 600px) {
-    .error-code {
-        font-size: 12vw;
-        text-align: center;
-        letter-spacing: 0.1em;
-        margin-top: 800px; /* Adjust this value as needed to lower the heading */
-        padding-top: 00px;
-        text-shadow: 2px 3px 0 #555; /* Shadow effect */
+/* Landscape/rotated view for devices with width < 900px */
+@media (max-width: 1000px) {
+    body {
+        background-color: #000;
+        background-image: none;
+        position: relative;
     }
-
-    .avatar img {
-        width: 59vw;
-        height: 60vw;  
-        position: absolute; /* Position the image absolutely */ 
-        bottom: 0; /* Align the bottom of the image with the bottom of the container */
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vh;
+        height: 100vw;
+        background: #000 url('../design2.png') no-repeat top center fixed;
+        background-size: contain;
+        background-position: top center;
+        background-attachment: fixed;
+        transform: rotate(90deg) translateY(-100vw);
+        transform-origin: top left;
+        z-index: -1;
+        pointer-events: none;
+        display: block;
     }
+}
 
-    .error-code {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        width: 100vw;
-        margin: 0;
-        text-align: center;
-        text-shadow: 2px 3px 0 #555; /* Shadow effect */
-     
+/* 2. Default background for desktop/tablet (portrait, cover) */
+@media (min-width: 1000px) {
+    body {
+        background: #000 url('../design2.png') no-repeat center center fixed;
+        background-size: 100vw 100vh;
+        background-position: center;
+        background-attachment: fixed;
     }
-    
-}
-
-.mint-button {
-    position: absolute; /* Position the button absolutely */
-    top: 20px; /* Distance from the top of the viewport */
-    right: 20px; /* Distance from the right of the viewport */
-    padding: 10px 20px; /* Padding for the button */
-    width: 83px; /* adjust as needed */
-    height: 36px; /* adjust as needed */
-    font-size: 16px; /* Font size for the button text */
-    background-color: #ff00a2; /* Background color for the button */
-    color: white; /* Text color */
-    border: none; /* Remove default border */
-    border-radius:20px; /* Rounded corners */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    z-index: 2; /* Ensure the button is above other elements */
-    margin: 4px 2px;
-    text-align: center;
-}
-
-.mint-button:hover {
-    background-color: #e6008c; /* Darker shade on hover */
 }
 
 
 
-@keyframes vibrate {
-    0% { transform: translate(0); }
-    25% { transform: translate(-2px, 0); }
-    50% { transform: translate(2px, 0); }
-    75% { transform: translate(-2px, 0); }
-    100% { transform: translate(0); }
-}
-
-.vibrating {
-    animation: vibrate 0.15s linear infinite;
-}

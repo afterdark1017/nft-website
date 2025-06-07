@@ -8,46 +8,30 @@ html, body {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #050000;
+    /* background-color: #050000; */
     text-align: center;
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    background-color: white; /* Optional: Set background color */
+    /* background-color: white; */ /* Optional: Set background color */
 }
 
-h1 {
-    color: #3b026a; /* Blue color for the text */
-    text-shadow: 3px 3px 0 #555; /* Shadow effect */
-    font-size: 5rem; /* Adjust font size as needed */
-    text-align: center; /* Center text */
-    font-style: italic;
-    image-rendering: pixelated; /* Apply pixelated effect */
-    -webkit-font-smoothing: none; /* Disable font smoothing for pixelated effect */
-    -moz-osx-font-smoothing: grayscale; /* Disable font smoothing for pixelated effect */
-    font-family: 'Courier New', Courier, monospace; /* Use a monospaced font for a pixelated look */
-    text-shadow: 0 0 0.5px rgba(0, 0, 0, 0.5); /* Optional: Add a slight shadow for depth */
-    padding: 20px; /* Add padding to prevent overlap */
-    box-sizing: border-box; /* Include padding in width/height calculations */
-}
-
-.error-code {
-    font-size: 8rem; /* Make the text larger */
-    text-align: center; /* Center text */
-    image-rendering: pixelated; /* Apply pixelated effect */
-    -webkit-font-smoothing: none; /* Disable font smoothing for pixelated effect */
-    -moz-osx-font-smoothing: grayscale; /* Disable font smoothing for pixelated effect */
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Courier, monospace; /* Use a monospaced font for a pixelated look */
-    text-shadow: 0 0 0.5px rgba(0, 0, 0, 0.5); /* Optional: Add a slight shadow for depth */
-    opacity: 1; /* Ensure the text is visible */
+.avatar img {
+    width: 20%; /* Set width to 100% to fill the container */
+    height: auto; /* Maintain aspect ratio */
+    border: none;
+    position: absolute; /* Position the image absolutely */
+    bottom: 0; /* Align the bottom of the image with the bottom of the container */
+    left: 50%; /* Center the image horizontally */
+    transform: translateX(-50%); /* Adjust for the width of the image */
 }
 
 .logo-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 120px;
+    margin-top: 90px;
 }
 
 .logo-row {
@@ -58,18 +42,14 @@ h1 {
 }
 
 .logo {
-    width: 130px;
-    height: auto;
+    width: 90px;
+    height: 19px;
     padding: 20px;
-    transition: box-shadow 0.3s ease;
+  
 }
 
 .logo:hover {
     box-shadow: 0 0 20px #3b026a, 0 0 30px #3b026a;
-}
-
-.logo-abstract {
-    /* No default box-shadow here, handled in media query for mobile/tablet */
 }
 
 @media (min-width: 900px) {
@@ -97,15 +77,7 @@ h1 {
         align-items: center;
         min-height: 100vh;
     }
-    .error-code {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100vw;
-        margin: 0;
-        text-align: center;
-    }
+
     .logo-abstract {
         box-shadow: 0 0 20px #3b026a, 0 0 30px #3b026a !important;
     }
@@ -118,3 +90,8 @@ h1 {
         letter-spacing: 0.1em;
     }
 }
+
+
+
+
+

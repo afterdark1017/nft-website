@@ -3,14 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>...</title>
+    
     <link rel="stylesheet" href="css/styles1.css">
-    <title>Minting ETA</title>
 </head>
 <body>
-    <h1 class="error-code">Coming soon...</h1>
-    <div class="avatar">
-        <img id="slideshow" src="" alt="">
+
+    <div class="button-group">
+        <!-- Increment Button -->
+        <button id="decrementBtn2" class="button-group__button button-group__button--decrement" click="decrementCartValue()">
+          -
+        </button>
+        <!-- Mint Button -->
+        <button id="auction-button" class="button-group__button button-group__button-mint">
+           Mint
+        </button>
+        <!-- Increment Button -->
+        <button id="incrementBtn2" class="button-group__button button-group__button-increments" click="incrementCartValue()">
+          +
+        </button>
+
+
+        <div class="cart-label">
+            <i class="fas fa-shopping-cart"></i>
+            <div class="counter2" id="counter2">1</div>
+        </div>
+
+
+        <div class="supply __web-inspector-hide-shortcut__">Minted: &nbsp; 0%</div>
     </div>
+    
+
+    <div class="container">
+       
+        <div class="avatar">
+            <img id="slideshow" src="" alt="">
+        </div>
+    </div>
+    
+
+
+
     <div class="logo-container">
         <a href="https://opensea.io/" target="_blank" rel="noopener noreferrer">
             <img src="logo/OpenSea.png" alt="OpenSea Logo" class="logo">
@@ -25,6 +58,10 @@
             <img src="logo/Base_Wordmark_Blue.png" alt="Base Wordmark Blue Logo" class="logo">
         </a>
     </div>
+    
+    
     <script src="js/script1.js"></script>
+    
+  
 </body>
 </html>
