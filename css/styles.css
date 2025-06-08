@@ -30,7 +30,7 @@ body {
         left: 0;
         width: 100vh;
         height: 100vw;
-        background: #000 url('../design2.png') no-repeat top center fixed;
+        background: #000 url('../design4.png') no-repeat top center fixed;
         background-size: contain;
         background-position: top center;
         background-attachment: fixed;
@@ -45,12 +45,41 @@ body {
 /* 2. Default background for desktop/tablet (portrait, cover) */
 @media (min-width: 1000px) {
     body {
-        background: #000 url('../design2.png') no-repeat center center fixed;
+        background: #000 url('../design4.png') no-repeat center center fixed;
         background-size: 100vw 100vh;
         background-position: center;
         background-attachment: fixed;
     }
 }
 
+
+/* Add this to the end of your styles.css */
+.mint-button {
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+/* Landscape view for devices with width < 1000px */
+@media (max-width: 1000px) {
+    .mint-button {
+        bottom: 10px; /* Adjust for landscape */
+    }
+}
+
+/* Portrait view for devices with min width of 1000px */
+@media (min-width: 1000px) {
+    .mint-button {
+        bottom: 20px; /* Adjust for portrait */
+    }
+}
 
 

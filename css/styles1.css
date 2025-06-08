@@ -18,8 +18,8 @@ body {
 }
 
 .avatar img {
-    width: 20%; /* Set width to 100% to fill the container */
-    height: auto; /* Maintain aspect ratio */
+    width: 13%; /* Set width to 100% to fill the container */
+    height: 35%; /* Maintain aspect ratio */
     border: none;
     position: absolute; /* Position the image absolutely */
     bottom: 0; /* Align the bottom of the image with the bottom of the container */
